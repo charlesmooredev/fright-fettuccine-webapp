@@ -6,11 +6,6 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "paths": {
-      "@types/*": [
-        "types/*"
-      ]
-    },
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
