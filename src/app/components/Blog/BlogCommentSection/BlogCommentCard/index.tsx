@@ -1,4 +1,4 @@
-import { BlogCommentData } from '../../../../types/generated';
+import { BlogCommentData } from '../../../../../types/generated';
 
 interface Props {
   data: BlogCommentData;

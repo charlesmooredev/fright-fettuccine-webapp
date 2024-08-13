@@ -1,8 +1,8 @@
 import { HeaderWithContent } from '../../components/Header/HeaderWithContent';
 import { useParams } from 'react-router-dom';
-import { Fragment, useMemo } from 'react';
+import { useMemo } from 'react';
 import { blogsArray } from '../../../helpers/BlogsHelper';
-import { BlogCommentCard } from '../../components/Blog/BlogCommentCard';
+import { BlogCommentSection } from '../../components/Blog/BlogCommentSection';
 
 export function ActiveStoryPage() {
   const { storyId } = useParams();
@@ -26,11 +26,7 @@ export function ActiveStoryPage() {
           ))}
         </div>
         <hr className="border-primary-900" />
-        {currentStory.comments.map((comment, index) => (
-          <Fragment key={`${comment.poster}-${index}`}>
-            <BlogCommentCard data={comment} />
-          </Fragment>
-        ))}
+        <BlogCommentSection data={currentStory} />
       </div>
     </HeaderWithContent>
   );
